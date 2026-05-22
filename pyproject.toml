@@ -1,0 +1,30 @@
+[project]
+name = "linux-tuning-audit"
+version = "0.0.1"
+description = "Linux tuning audit tool"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.scripts]
+linux-tuning-audit = "linux-tuning-audit.cli:main"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff.lint]
+select = ["Q"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.uv]
+package = true
