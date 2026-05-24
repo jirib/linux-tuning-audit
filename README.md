@@ -27,8 +27,8 @@ $ linux-tuning-audit audit \
 
 ``` shell
 $ uv run python tools/scrape_profiles/scrape.py \
-  --profile azure_nfs \
-  --output /tmp/azure_nfs.generated.yaml
+  --profile azure_network \
+  --output /tmp/azure_network.generated.yaml
 
-$ diff -u data/profiles/azure_nfs.yaml /tmp/azure_nfs.generated.yaml
+$ diff -u data/profiles/azure_network.yaml /tmp/azure_network.generated.yaml
 ```
