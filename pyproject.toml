@@ -10,7 +10,11 @@ dependencies = [
 ]
 
 [project.scripts]
-linux-tuning-audit = "linux-tuning-audit.cli:main"
+linux-tuning-audit = "linux_tuning_audit.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
 
 [dependency-groups]
 dev = [

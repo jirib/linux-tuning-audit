@@ -1,1 +1,6 @@
 # https://learn.microsoft.com/en-us/azure/sap/workloads/sap-hana-scale-out-standby-netapp-files-suse
+
+id: azure_sap_hana_scale_out_netapp
+extends:
+  - azure_generic
+  - azure_nfs
