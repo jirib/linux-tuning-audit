@@ -6,12 +6,6 @@ recommendations from platform providers (for example, Azure, AWS,...).
 Examples:
 
 ``` shell
-$ linux-tuning-audit scrape \
-  --profile azure-network \
-  --profile azure-sap-hana-scale-out-netapp
-```
-
-``` shell
 $ linux-tuning-audit audit \
   --profile azure-network \
   --profile azure-sap-hana-scale-out-netapp \
@@ -28,3 +22,13 @@ $ linux-tuning-audit audit \
 ## Installation
 
 ...
+
+## Scraping recommendations
+
+``` shell
+$ uv run python tools/scrape_profiles/scrape.py \
+  --profile azure_nfs \
+  --output /tmp/azure_nfs.generated.yaml
+
+$ diff -u data/profiles/azure_nfs.yaml /tmp/azure_nfs.generated.yaml
+```
