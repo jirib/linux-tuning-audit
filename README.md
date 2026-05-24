@@ -7,19 +7,19 @@ Examples:
 
 ``` shell
 $ linux-tuning-audit scrape \
-  --profile azure_generic \
-  --profile azure_nfs \
-  --profile azure_sap_hana_netapp_files
+  --profile azure-network \
+  --profile azure-sap-hana-scale-out-netapp
 ```
 
 ``` shell
 $ linux-tuning-audit audit \
-  --profile azure/sap-hana-scale-out-netapp \
+  --profile azure-network \
+  --profile azure-sap-hana-scale-out-netapp \
   --evidence supportconfig \
   --path /tmp/scc_host_250524_1200
 
 $ linux-tuning-audit audit \
-  --profile azure/network \
+  --profile azure-network \
   --evidence sosreport \
   --path /tmp/sosreport-host-2026-05-24
 ```
